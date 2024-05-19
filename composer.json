@@ -1,0 +1,10 @@
+{
+    "name": "rwin/to-do-list",
+    "description": "A simple Todo List project with (Ajax, php and mysql)",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "hekmatinasser/verta": "^8.4"
+    }
+}
