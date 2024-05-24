@@ -1,6 +1,6 @@
 <?php 
 
-$databseConfig = [
+$databaseConfig = (object) [
     'host' => 'localhost',
     'user' => 'root',
     'pass' => '',

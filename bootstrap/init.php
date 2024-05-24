@@ -2,7 +2,18 @@
 
 include "constants.php";
 include "config.php";
-include "libs/helpers.php";
-include "libs/lib-tasks.php";
-include "libs/lib-auth.php";
 include "vendor/autoload.php";
+include "libs/helpers.php";
+
+try 
+{
+    $pdo = new PDO("mysql:dbname={$databaseConfig->db};host={$databaseConfig->host}", $databaseConfig->user, $databaseConfig->pass);
+} 
+catch (PDOException $e)
+{
+    diePage('Connection Failed: ' . $e->getMessage());
+}
+
+
+include "libs/lib-auth.php";
+include "libs/lib-tasks.php";

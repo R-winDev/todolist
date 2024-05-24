@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title><?= SITE_TITLE ?></title>
-  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body>
@@ -21,13 +21,20 @@
         </div>
       </div>
       <div class="menu">
-        <div class="title">Navigation</div>
+        <div class="title">Folders</div>
         <ul>
-          <li> <i class="fa fa-home"></i>Home</li>
-          <li><i class="fa fa-signal"></i>Activity</li>
-          <li class="active"> <i class="fa fa-tasks"></i>Manage Tasks</li>
-          <li> <i class="fa fa-envelope"></i>Messages</li>
+          <?php foreach ($folders as $folder):?>
+          <li>
+            <a href="?folder_id=<?=$folder->id?>"><i class="fa fa-folder"></i><?=$folder->name?></a>
+            <a href="?delete_folder=<?=$folder->id?>"><i class="fa fa-trash"></i></a>
+          </li>
+          <?php endforeach; ?>
+          <li class="active"> <i class="fa fa-folder-open"></i>Current Folder</li>
         </ul>
+        <div>
+          <input type="text" id="newFolderInput" placeholder="Add New Folder"/>
+          <button id="newFolderBtn">+</button>
+        </div>
       </div>
     </div>
     <div class="view">
