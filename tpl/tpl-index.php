@@ -87,7 +87,7 @@
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="assets/js/script.js"></script>
   <script src="assets/js/script.js"></script>
   <script>
-    $(document).ready(function()
+  $(document).ready(function()
   {
     $('.isDone').click(function(e)
     {
