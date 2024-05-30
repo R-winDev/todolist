@@ -1,4 +1,4 @@
-<?php
+<?php defined("BASE_PATH") OR die("Access Denied!");
 /*
 * Auth Functions
 * validation the user!

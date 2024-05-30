@@ -9,10 +9,15 @@ if (isset($_GET['delete_folder']) && is_numeric($_GET['delete_folder']))
     // echo "$count folders has been deleted!";
 }
 
+if (isset($_GET['delete_task']) && is_numeric($_GET['delete_task']))
+{
+    $count = deleteTask($_GET['delete_task']);
+    // echo "$count folders has been deleted!";
+}
+
 
 
 // connect to db and get the data
 $folders = getFolders();
 $tasks = getTasks();
-
 include "tpl/tpl-index.php";
